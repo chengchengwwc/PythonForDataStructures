@@ -11,7 +11,7 @@ from abstraclist import AbstractList
 from arraylistiterator import ArrayListIterator
 
 
-class ArrayList(object):
+class ArrayList(AbstractList):
 
     DEFAULT_CAPACITY = 10
 
@@ -64,6 +64,8 @@ class ArrayList(object):
         self._items[i] = item
         self._size += 1
         self.incModCount()
+
+
 
     def pop(self, i = None):
         """Precondition: 0 <= i < len(self).
